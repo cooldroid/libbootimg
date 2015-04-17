@@ -1,4 +1,5 @@
 # bbootimg
+ifeq ($(RECOVERY_VARIANT),twmr)
 LOCAL_PATH:= $(call my-dir)
 
 bbootimg_src_file := src/bbootimg.c src/libbootimg.c
@@ -47,3 +48,4 @@ LOCAL_SRC_FILES := src/libbootimg.c
 LOCAL_MODULE := libbootimg
 LOCAL_MODULE_TAGS := eng
 include $(BUILD_STATIC_LIBRARY)
+endif
